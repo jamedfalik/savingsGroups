@@ -43,13 +43,11 @@ Author: Jamie B. Falik
 /* Body and Links
 /*******************************************/
 
-.logo {
-  width: 10px;
-}
+
 
 
 .section-one {
-  background: url(../images/cover_image2.jpg);
+  background: url(../images/cover_image4.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -57,8 +55,8 @@ Author: Jamie B. Falik
 }
 
 .section-one-text {
-  margin-top: 175px;
-  margin-right: 100px;
+  margin-top: 300px;
+  margin-right: 20px;
   margin-bottom: 825px;
 }
 
@@ -68,12 +66,15 @@ h1 {
 
 h2 {
   font-size: 30px;
-  opacity: .85;
+}
+
+.opening {
+  font-size: 20px;
+  padding-right: 275px;
 }
 
 p {
   font-size: 20px;
-  opacity: .85;
 }
 
 .section-two {
@@ -84,12 +85,47 @@ p {
   background-size: cover;
 }
 
-.section-two-text {
+.section-two-text, .section-three-text{
   margin-top: 175px;
-  margin-bottom: 175px;
+  margin-bottom: 140px;
 }
 
+.section-two-text h1,  .section-three-text h1{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.example {
+  margin-top: 55px;
+}
 
 .map {
   float: right;
 }
+
+.light {
+  float: left;
+  margin-right: 30px;
+}
+
+.section-three {
+  background: url(../images/fiber.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
