@@ -1,0 +1,95 @@
+/*
+Project Name: Savings Group Infographic
+Author: Jamie B. Falik
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* Body and Links
+/*******************************************/
+
+.logo {
+  width: 10px;
+}
+
+
+.section-one {
+  background: url(../images/cover_image2.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.section-one-text {
+  margin-top: 175px;
+  margin-right: 100px;
+  margin-bottom: 825px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 30px;
+  opacity: .85;
+}
+
+p {
+  font-size: 20px;
+  opacity: .85;
+}
+
+.section-two {
+  background: url(../images/sprinkles.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.section-two-text {
+  margin-top: 175px;
+  margin-bottom: 175px;
+}
+
+
+.map {
+  float: right;
+}
