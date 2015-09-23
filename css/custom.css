@@ -43,21 +43,20 @@ Author: Jamie B. Falik
 /* Body and Links
 /*******************************************/
 
-
-
-
 .section-one {
-  background: url(../images/cover_image4.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url(../images/cover_image5.jpg);
+] background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
+  background-color: #464646;
 }
 
 .section-one-text {
-  margin-top: 300px;
-  margin-right: 20px;
-  margin-bottom: 825px;
+  color: #efecec;;
+  text-align: center;
+  margin-top: 675px;
+  margin-bottom: 255px;
 }
 
 h1 {
@@ -70,7 +69,6 @@ h2 {
 
 .opening {
   font-size: 20px;
-  padding-right: 275px;
 }
 
 p {
