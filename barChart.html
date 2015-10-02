@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sliding Bar Charts</title>
+  <script src="http://mbostock.github.com/d3/d3.v2.min.js?2.8.1"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>
+    body {
+      position: relative;
+      font-family: "Helvetica Neue";
+      width: 1000px;
+      margin: auto;
+      margin-top: 80px;
+      margin-bottom: 4em;
+    }
+    svg {
+      font: 10px sans-serif;
+      border: 1px solid #7BC8FB;
+    }
+    .bar {
+      fill: #7BC8FB;
+    }
+  </style>
+</head>
+<body>
+  <div id="chart"></div>
+</body>
+
+<script>
+  function chart(selector, data, config) {
+    if ('undefined' == typeof config )        { var config = {} };
+    if ('undefined' == typeof config.width )  { config.width = 600 };
+    if ('undefined' == typeof config.height ) { config.height = 100 };
+    var draw = function() {
+      console.log("DOM ID:", selector, "Data:", data, "Config:", config);
+      var bands = data.map(function(d,i) { return i; });
+      var x = d3.scale.ordinal()
+          .domain(bands).
+          rangeRoundBands([0, config.width], 0.1);
+      var y = d3.scale.linear()
+          .domain([0, 100])
+          .range([0, config.height]);
+      var chart = d3.select(selector).selectAll("svg");
+      if ( chart.empty() ) chart = d3.select(selector).append("svg");
+      chart
+          .attr("class",  "chart")
+          .attr("width",  config.width)
+          .attr("height", config.height);
+      var bar = chart.selectAll("rect")
+          .data(data);
+      // Enter
+      bar.enter()
+          .append("rect")
+          .attr("class", "bar")
+          .attr("y",      config.height);
+      // Update
+      bar
+          .attr("height", config.height)
+         .transition()
+            .duration(500)
+          .attr("x",      function(d, i) { return x(i); })
+          .attr("width",  x.rangeBand())
+          .attr("y",      function(d, i) { return config.height - y(d); })
+          .attr("height", function(d, i) { return y(d); });
+      // Exit
+      bar.exit()
+          .transition()
+            .duration(250)
+          .attr("y",      config.height)
+          .attr("height", config.height)
+          .remove();
+    };
+    return draw();
+  }
+</script>
+
+<script>
+  setTimeout(function() { chart( '#chart', [5, 10, 15, 10, 20, 50, 75, 20, 10, 5] ) }, 0);
+  setTimeout(function() { chart( '#chart', [15, 35, 10, 25, 50, 25, 25, 50, 75, 15] ) }, 1000);
+  // setTimeout(function() { chart( '#chart', [50, 75, 25, 35, 15] ) }, 2000);
+  // setTimeout(function() { chart( '#chart', [75, 15, 0, 45] ) }, 3000);
+  // setTimeout(function() { chart( '#chart', [10, 20, 50, 75, 20, 10] ) }, 4000);
+  // setTimeout(function() { chart( '#chart', [15, 5, 25, 50, 75, 60] ) }, 5000);
+  // setTimeout(function() { chart( '#chart', [10, 10, 10, 10, 10, 10] ) }, 6000);
+  // setTimeout(function() { chart( '#chart', [0, 0, 0, 0, 0, 0] ) }, 7000);
+</script>
+
+</html>

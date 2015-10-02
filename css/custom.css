@@ -43,28 +43,40 @@ Author: Jamie B. Falik
 /* Body and Links
 /*******************************************/
 
+
+.logo {
+  width: 200px;
+}
+
+.logo-position {
+  float: left;
+  padding: 45px;
+}
+
+
 .section-one {
-  background: url(../images/cover_image5.jpg);
-] background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: url(../images/cover_image8.jpg);
   background-size: cover;
   background-color: #464646;
+  opacity: .9;
+  height: 700px;
 }
 
 .section-one-text {
-  color: #efecec;;
   text-align: center;
-  margin-top: 675px;
-  margin-bottom: 255px;
+  margin-top: 300px;
+  color: white;
+  opacity: .9;
+
+  
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 52px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .opening {
@@ -77,15 +89,11 @@ p {
 
 .section-two {
   background: url(../images/sprinkles.png);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 .section-two-text, .section-three-text{
-  margin-top: 175px;
-  margin-bottom: 140px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .section-two-text h1,  .section-three-text h1{
@@ -102,7 +110,13 @@ p {
 
 .map {
   float: right;
+  width: 600px;
 }
+
+.circles {
+  fill: #042037;
+}
+
 
 .light {
   float: left;
@@ -118,6 +132,39 @@ p {
 }
 
 
+@media (max-width: 991px) {
+
+.logo-position {
+  float: none;
+  padding: 15px;
+} 
+
+.section-one-text {
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+
+.section-two-text, .section-three-text{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+.section-two-text h1,  .section-three-text h1{
+  border-top: none;
+  border-bottom: none;
+  text-align: center;
+}
+
+.map{
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
 
 
 
