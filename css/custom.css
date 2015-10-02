@@ -55,22 +55,24 @@ Author: Jamie B. Falik
 
 
 .section-one {
-  background: url(../images/cover_image8.jpg) no-repeat center center fixed;
+  background: url(../images/cover_image8.jpg);
   background-size: cover;
   background-color: #464646;
   opacity: .9;
-  height: 900px;
+  height: 700px;
 }
 
 .section-one-text {
   text-align: center;
   margin-top: 300px;
+  color: white;
+  opacity: .9;
 
   
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 52px;
 }
 
 h2 {
